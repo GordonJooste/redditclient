@@ -1,56 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
 import './App.css';
+import React, {useState} from "react";
+import { Switch, Route, Redirect, NavLink } from "react-router-dom";
+import {Post} from './components/post/post';
 
-function App() {
+function App(){
+
+  
+
+  const [searchQuery, setsearchQuery] = useState([]);
+  const [PostLink, setPostLink] = useState([]);
+  const [PostText, setPostText] = useState([]);
+  const [PostPicture, setPostPicture] = useState([]);
+  const [CommentsList, setCommentsList] = useState([]);
+
+  const ROUTES = {
+    POSTS: "/posts",
+  };
+
+  setsearchQuery((prev)=>{ return [searchQuery, ...prev]});
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
+    <div className='App'>
+      <nav>
+        <NavLink to={ROUTES.POSTS} activeClassName="active">
+          Home
+        </NavLink>
+        <Search search = {searchQuery}/>
+      </nav>
+      <main>
+        //TODO Posts list
+      </main>
     </div>
   );
 }
