@@ -7,7 +7,7 @@ import {apiCall} from './Data';
 function App(){
 
   const [searchQuery, setsearchQuery] = useState([]);
-  const [PostsArray, setPostsArray] = useState( { }); 
+  const [PostsArray, setPostsArray] = useState( ); 
   const [CommentsList, setCommentsList] = useState([]);
   let result = 'lol';
   
@@ -18,7 +18,7 @@ function App(){
     setPostsArray((prev) => {
       // its not working because I need to use a promise. Get the result from the promise and then set state etc. 
       
-      apiCall.fetchPosts('/r/popular').then((data) => {
+      apiCall.fetchPosts('/r/popular').then((data) => {W
         console.log(`useEffect`);
         result = data[4];    
         console.log(result);
