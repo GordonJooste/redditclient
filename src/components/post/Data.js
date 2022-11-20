@@ -13,10 +13,13 @@ export const apiCall = {
                     return [];
                 }
                 console.log('completedAPICall');
-                console.log(jsonResponse.data.children);
-                let string = JSON.stringify(jsonResponse.data.children[1]);
-                console.log(string);
-                return jsonResponse.data.children; //returning an Array of Posts
+
+                // Should set the state here or update the store here. 
+
+                //console.log(jsonResponse.data.children);
+                //let string = JSON.stringify(jsonResponse.data.children[1]);
+                //console.log(string);
+                return jsonResponse; //returning an Array of Posts
             })
     },
     fetchComments(permalink) {
@@ -31,7 +34,6 @@ export const apiCall = {
                     return [];
                 }
                 console.log('completedAPICall');
-                console.log(jsonResponse[1]);
                 return jsonResponse[1].data.children; // returning array of comments
             })
     }
