@@ -1,21 +1,34 @@
 import React, {useState, useEffect} from "react";
 import { Switch, Route, Redirect, NavLink } from "react-router-dom";
 import {Post} from '../../components/post/post';
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import ROUTES from "../../app/routes";
-import { selectPosts, selectFirstPost } from "../../components/post/postSlice";
+import { loadPosts ,selectPosts, selectFirstPost } from "../../components/post/postSlice";
 
 
 export const Front = () => {
-    const posts = useSelector(selectPosts);
+    const dispatch = useDispatch();
+    const postsObject = useSelector(selectPosts);
     const firstPost = useSelector(selectFirstPost);
-    console.log(posts);
+    const postsArray = postsObject.posts;
+    useEffect(() => {
+      dispatch(loadPosts(dispatch));
+    }, [dispatch]);
+    
+
     return(
         <div className="front-page">
             <h1> Welcome to Simple Reddit</h1>
             <ul className="posts-list">
-                <li> {firstPost} </li>
+                <li> 
+                  <h2>{postsArray[0].data.author} </h2>
+                  <a>{postsArray[0].data.subreddit }</a> <br></br>
+                  <a>{postsArray[0].data.num_comments }</a>
+                   </li>
+                { 
+                  // map and prop drill post info post component
+                }
                 
             </ul>
 
