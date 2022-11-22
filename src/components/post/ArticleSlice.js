@@ -5,7 +5,7 @@ import { apiCall } from './Data';
 // Make sure to update the inital state with all the post information you want to use! Otherwise error on first run
 const initialState = {
   subreddit: '/r/popular',
-  posts: [{data: {title:'ha', subreddit: '/r/trees', num_comments: 200}},{data: {title:'ha', subreddit: '/r/trees', num_comments: 201}},{data: {title:'ha', subreddit: '/r/trees', num_comments: 204}}],
+  posts: [{data: {title:'ha', subreddit: '/r/trees', num_comments: 200, id: 1}},{data: {title:'ha', subreddit: '/r/trees', num_comments: 201, id: 2}},{data: {title:'ha', subreddit: '/r/trees', num_comments: 204, id: 3}}],
 };
 
 // The function below is called a thunk and allows us to perform async logic. It

@@ -1,7 +1,6 @@
 //import './App.css';
 import React, {useState, useEffect} from "react";
 import { BrowserRouter as Router,Switch, Route, Redirect, NavLink, } from "react-router-dom";
-import {Post} from './components/post/post';
 import {Front} from './containers/front/front';
 import {apiCall} from './components/post/Data';
 import ROUTES from './app/routes';
