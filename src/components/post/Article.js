@@ -4,12 +4,11 @@ import { Switch, Route, Redirect, NavLink } from "react-router-dom";
 
 export const Article = (props)=>{
 
-    const {title, selftext,isVideo,media,permalink} = props;
+    const {title, selftext,isVideo,media,permalink,thumbnail, thumbnail_height,thumbnail_width} = props;
 
     console.log(`Video? ${isVideo}`)
     
     if(isVideo){
-        console.log(Object.keys(media.reddit_video));
         return (
             <div className="article_container">
                 <h3 className="article_title">{title}</h3>
@@ -19,6 +18,16 @@ export const Article = (props)=>{
                 </video>
             </div>
         );
+    }
+
+    if(thumbnail != 'self' || thumbnail != 'nsfw'){    
+        return (
+            <div className="article_container">
+                <h3>{title}</h3>
+                <br></br>
+                <article><img src={thumbnail} alt={selftext} width={thumbnail_width} height={thumbnail_height} /> {selftext}</article>
+            </div>
+        )
     }
 
     return (
