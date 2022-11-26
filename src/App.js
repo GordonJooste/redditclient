@@ -1,9 +1,13 @@
-//import './App.css';
+import './styles/profile.css';
 import React, {useState, useEffect} from "react";
-import { BrowserRouter as Router,Switch, Route, Redirect, NavLink, } from "react-router-dom";
+import { BrowserRouter as Router, Route, Redirect, NavLink, Routes, } from "react-router-dom";
 import {Front} from './containers/front/front';
 import {apiCall} from './components/post/Data';
+import { loadPosts ,selectPosts } from "./components/post/ArticleSlice";
+import { useSelector, useDispatch } from "react-redux";
 import ROUTES from './app/routes';
+import { Article } from "./components/post/Article";
+import {comments} from './containers/comments/comments'
 
 function App(){
 
@@ -16,17 +20,6 @@ function App(){
     setsearchQuery((prev) => { 
       return [searchQuery, ...prev]
     });
-
-    /*setPostsArray((prev) => {
-      // its not working because I need to use a promise. Get the result from the promise and then set state etc. 
-      
-      apiCall.fetchPosts('/r/popular').then((data) => {
-        console.log(`useEffect`);
-        result = data[4];    
-        console.log(result);
-        return result;
-      }
-    })*/
   }, [0]);
   
   
@@ -54,7 +47,7 @@ function App(){
       </main>
       
     </div>
-  );
+    );
 }
 
 export default App;

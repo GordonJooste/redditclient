@@ -5,7 +5,7 @@ import { apiCall } from './Data';
 // Make sure to update the inital state with all the post information you want to use! Otherwise error on first run
 const initialState = {
   subreddit: '/r/popular',
-  posts: [{data: {title:'ha', subreddit: '/r/trees', num_comments: 200, id: 1}},{data: {title:'ha', subreddit: '/r/trees', num_comments: 201, id: 2}},{data: {title:'ha', subreddit: '/r/trees', num_comments: 204, id: 3}}],
+  posts: [{data: {title:'ha', subreddit: '/r/trees', num_comments: 200, id: 1, selftext:''}},{data: {title:'ha', subreddit: '/r/trees', num_comments: 201, id: 2, selftext:''}},{data: {title:'ha', subreddit: '/r/trees', num_comments: 204, id: 3, selftext:''}}],
 };
 
 // The function below is called a thunk and allows us to perform async logic. It
@@ -16,7 +16,7 @@ const initialState = {
 
 export const loadPosts = ()=>{
   return async (dispatch) =>{
-    const response = await apiCall.fetchPosts('/r/popular');
+    const response = await apiCall.fetchPosts('/r/ask');
     const payload = response.data.children;
     console.log('thunking');
     dispatch({type:'posts/changePosts', payload: payload});

@@ -1,5 +1,6 @@
+import '../../styles/profile.css';
 import React, {useEffect} from "react";
-import { Switch, Route, Redirect, NavLink } from "react-router-dom";
+import { Switch, Routes, Redirect, NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import ROUTES from "../../app/routes";
@@ -21,8 +22,12 @@ export const Front = () => {
             <ul className="posts-list">
                 { 
                   postsArray.map((item) => {
-                    console.log(item.data);
-                    return (<li key={item.data.id}> <Article  title ={item.data.title} selftext={item.data.selftext} isVideo={item.data.is_video} media={item.data.media} permalink ={item.data.permalink} thumbnail ={item.data.thumbnail} thumbnail_height ={item.data.thumbnail_height} thumbnail_width = {item.data.thumbnail_width} /> </li>)
+                    //console.log(item.data);
+                    return (
+                    <li key={item.data.id}> 
+                      <Article  title ={item.data.title} selftext={item.data.selftext} isVideo={item.data.is_video} media={item.data.media} permalink ={item.data.permalink} thumbnail ={item.data.thumbnail} thumbnail_height ={item.data.thumbnail_height} thumbnail_width = {item.data.thumbnail_width} url ={item.data.url} /> 
+                    </li>
+                    )  
                   })
                 }
                 
