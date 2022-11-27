@@ -16,7 +16,7 @@ const initialState = {
 
 export const loadPosts = ()=>{
   return async (dispatch) =>{
-    const response = await apiCall.fetchPosts('/r/ask');
+    const response = await apiCall.fetchPosts('/r/popular');
     const payload = response.data.children;
     console.log('thunking');
     dispatch({type:'posts/changePosts', payload: payload});
