@@ -26,26 +26,22 @@ function App(){
   
   return (
     <div className='App'>
+      <body>
       <Router>
-      <nav>
-        <ul>
-          <li>
-            <NavLink to={ROUTES.frontPageRoute()} activeclassname="active">
-              Front Page
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to={ROUTES.eyebleachRoute()} activeclassname="active">
-              Eye Bleach
-            </NavLink>
-          </li>
-        </ul>
+      <nav className='navbar'>          
+        <NavLink to={ROUTES.frontPageRoute()} activeclassname="active" className='navlink'>
+          Front Page
+        </NavLink>
+        <NavLink to={ROUTES.eyebleachRoute()} activeclassname="active" className='navlink'>
+          Eye Bleach
+        </NavLink>
       </nav>
       </Router>
-      <main>
-      <Front />
+
+      <main className='container'>
+        <Front />
       </main>
-      
+      </body>
     </div>
     );
 }

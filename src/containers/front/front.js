@@ -27,7 +27,7 @@ export const Front = () => {
                   postsArray.map((item) => {
                     //console.log(item.data);
                     return (
-                    <li key={item.data.id}> 
+                    <li key={item.data.id} className='card'> 
                       <Article  title ={item.data.title} selftext={item.data.selftext} isVideo={item.data.is_video} media={item.data.media} permalink ={item.data.permalink} thumbnail ={item.data.thumbnail} thumbnail_height ={item.data.thumbnail_height} thumbnail_width = {item.data.thumbnail_width} url ={item.data.url} /> 
                     </li>
                     )  
