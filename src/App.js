@@ -9,7 +9,7 @@ import { loadPosts ,selectPosts } from "./components/post/ArticleSlice";
 import { useSelector, useDispatch } from "react-redux";
 import ROUTES from './app/routes';
 import { Article } from "./components/post/Article";
-import {comments} from './containers/comments/comments'
+import {Comments, comments} from './containers/comments/comments'
 
 
 function App(){
@@ -46,15 +46,12 @@ function App(){
 
       <main className='container'>
         <Routes >
-          
           <Route path="/" index element={<Front />} />
-            
-          
           <Route path="eyebleach" element={<Eyebleach />} />
-          
           <Route path='funny' element ={<Funny/>} />
-
-
+          <Route path="eyebleach/:permalink" element={<Comments />}/>
+          <Route path="funny/:permalink" element={<Comments />}/>
+          <Route path=":permalink" element={<Comments />}/>
         </Routes>
         
       </main>
