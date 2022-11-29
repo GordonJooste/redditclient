@@ -20,7 +20,7 @@ export const Article = (props)=>{
                     <h3 className="article_title">{title}</h3>
                     
                     <article className="article_selftext"> {selftextfin}...</article>
-                    <video width="400" height="600" controls >
+                    <video width="500" height="400" controls >
                         <source src={media.reddit_video.fallback_url} type="video/mp4"/>
                     </video>
                     <a className="article_link" href= {url} >{url}</a>

@@ -4,22 +4,22 @@ import { Switch, Routes, Redirect, NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import ROUTES from "../../app/routes";
-import { loadPostsPop ,selectPosts } from "../../components/post/ArticleSlice";
+import { loadPostsEye ,selectPosts } from "../../components/post/ArticleSlice";
 import {Article} from '../../components/post/Article'
 
-export const Front = () => {
+export const Eyebleach = () => {
     const dispatch = useDispatch();
     const postsObject = useSelector(selectPosts);
     const postsArray = postsObject.posts;
     
     useEffect(() => {
-      dispatch(loadPostsPop(dispatch));
+      dispatch(loadPostsEye(dispatch));
     }, [dispatch]);
     
 
     return(
         <div className="front-page">
-            <h1> Welcome to Simple Reddit</h1>
+            <h1> Welcome to /r/EyeBleach!</h1>
             <ul className="posts-list">
                 { 
                   postsArray.map((item) => {

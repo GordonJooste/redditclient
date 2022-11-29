@@ -1,4 +1,5 @@
 import { createAsyncThunk, createSlice, configureStore, useDispatch } from '@reduxjs/toolkit';
+import { useSelector } from 'react-redux';
 import { apiCall } from './Data';
 
 
@@ -14,9 +15,27 @@ const initialState = {
 // code can then be executed and other actions can be dispatched. Thunks are
 // typically used to make async requests.
 
-export const loadPosts = ()=>{
+export const loadPostsPop = ()=>{
   return async (dispatch) =>{
     const response = await apiCall.fetchPosts('/r/popular');
+    const payload = response.data.children;
+    console.log('thunking');
+    dispatch({type:'posts/changePosts', payload: payload});
+  }
+}
+
+export const loadPostsEye = ()=>{
+  return async (dispatch) =>{
+    const response = await apiCall.fetchPosts('/r/eyebleach');
+    const payload = response.data.children;
+    console.log('thunking');
+    dispatch({type:'posts/changePosts', payload: payload});
+  }
+}
+
+export const loadPostsFun = ()=>{
+  return async (dispatch) =>{
+    const response = await apiCall.fetchPosts('/r/funny');
     const payload = response.data.children;
     console.log('thunking');
     dispatch({type:'posts/changePosts', payload: payload});
@@ -49,5 +68,6 @@ export const { changeSubreddit, changePosts } = postSlice.actions;
 // in the slice file. For example: `useSelector((state: RootState) => state.counter.value)`
 export const selectPosts = (state) => state.posts;
 export const selectFirstPost = (state) => state.posts.posts[0];
+export const selectSubreddit = (state) => state.posts.subreddit;
 
 export default postSlice.reducer;

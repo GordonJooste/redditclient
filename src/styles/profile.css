@@ -1,6 +1,6 @@
 .navbar {
   min-width: 100%;
-  background-color: #333;
+  background-color: #232427;
   overflow: hidden;
 }
 
@@ -16,6 +16,15 @@
 .navlink.active {
   background-color: #04AA6D;
   color: white;
+}
+
+.container ul {
+  list-style-type: none;
+}
+
+.container h1 {
+  color: antiquewhite;
+  text-align: center
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap");
@@ -46,8 +55,8 @@ body .container {
 
 body .container .card {
   position: relative;
-  min-width: 600px;
-  height: 500px;
+  min-width: 50rem;
+  height: 40rem;
   box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
     inset -5px -5px 15px rgba(255, 255, 255, 0.1),
     5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
@@ -79,7 +88,7 @@ body .container .card .box {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: clip;
+  overflow: hidden;
   transition: 0.5s;
 }
 

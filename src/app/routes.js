@@ -1,5 +1,6 @@
 const ROUTES = {
-    frontPageRoute: () => "/front",
+    funnyRoute: () => "/funny",
+    frontRoute: () => '/',
     commentsRoute: (permalink) => `/post/${permalink}`,
     eyebleachRoute: () => "/eyebleach",
   };
