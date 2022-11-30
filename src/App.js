@@ -46,12 +46,12 @@ function App(){
 
       <main className='container'>
         <Routes >
-          <Route path="/" index element={<Front />} />
-          <Route path="eyebleach" element={<Eyebleach />} />
-          <Route path='funny' element ={<Funny/>} />
-          <Route path="eyebleach/:permalink" element={<Comments />}/>
-          <Route path="funny/:permalink" element={<Comments />}/>
-          <Route path=":permalink" element={<Comments />}/>
+          <Route path="redditclient/" index element={<Front />} />
+          <Route path="redditclient/eyebleach" element={<Eyebleach />} />
+          <Route path='redditclient/funny' element ={<Funny/>} />
+          <Route path="redditclient/eyebleach/:permalink" element={<Comments />}/>
+          <Route path="redditclient/funny/:permalink" element={<Comments />}/>
+          <Route path="redditclient/:permalink" element={<Comments />}/>
         </Routes>
         
       </main>
