@@ -1,8 +1,7 @@
 const ROUTES = {
-    funnyRoute: () => "/funny",
-    frontRoute: () => '/',
-    commentsRoute: (permalink) => `/post/${permalink}`,
-    eyebleachRoute: () => "/eyebleach",
+    funnyRoute: () => "redditclient/funny",
+    frontRoute: () => 'redditclient/',
+    eyebleachRoute: () => "redditclient/eyebleach",
   };
   
   export default ROUTES;
