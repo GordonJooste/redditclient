@@ -14,7 +14,7 @@ export const Funny = () => {
     
     useEffect(() => {
       dispatch(loadPostsFun(dispatch));
-    }, [dispatch]);
+    }, []);
     
 
     return(

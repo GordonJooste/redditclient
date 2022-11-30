@@ -43,7 +43,7 @@ export const Comments = () => {
       dispatch(loadComments(dispatch,permalink));
       dispatch(loadCommentPost(dispatch,permalink));
       //console.log(postObject);
-    }, [commentsObject, postObject]);
+    }, []);
     
 
 

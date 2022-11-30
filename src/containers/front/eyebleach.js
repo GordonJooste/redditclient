@@ -14,7 +14,7 @@ export const Eyebleach = () => {
     
     useEffect(() => {
       dispatch(loadPostsEye(dispatch));
-    }, [dispatch]);
+    }, []);
     
 
     return(

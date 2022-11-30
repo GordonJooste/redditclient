@@ -23,7 +23,7 @@ function App(){
     setsearchQuery((prev) => { 
       return [searchQuery, ...prev]
     });
-  }, [0]);
+  }, []);
   
   
   

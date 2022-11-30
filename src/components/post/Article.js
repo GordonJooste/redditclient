@@ -19,11 +19,12 @@ export const Article = (props)=>{
                         <div className='content'>
                         <h3 className="article_title">{title}</h3>
                         
-                        <article className="article_selftext"> {selftext}</article>
+                        
                         <video width="500" height="400" controls >
                             <source src={media.reddit_video.fallback_url} type="video/mp4"/>
                         </video>
                         <a className="article_link" href= {url} >{url}</a>
+                        <article className="article_selftext"> {selftext}</article>
                         </div>    
                 </div>
             );
@@ -34,8 +35,8 @@ export const Article = (props)=>{
                 <div className="box">
                     <div className='content'>
                         <h3 className="article_title">{title}</h3>
-                        
-                        <article className="article_selftext" ><img src={thumbnail} width={thumbnail_width} height={thumbnail_height} /> {selftext}</article>
+                        <img src={thumbnail}  />
+                        <article className="article_selftext" > {selftext}</article>
                         <a className="article_link" href= {url} >{url}</a>
                         </div>
                 </div>
@@ -74,8 +75,8 @@ export const Article = (props)=>{
             <Link to={permalinkFinal} className="box">
                 <div className='content'>
                     <h3 className="article_title">{title}</h3>
-                    
-                    <article className="article_selftext" ><img src={thumbnail} width={thumbnail_width} height={thumbnail_height} /> {selftextfin}...</article>
+                    <img src={thumbnail}  />
+                    <article className="article_selftext" > {selftextfin}...</article>
                     <a className="article_link" href= {url} >{url}</a>
                     </div>
             </Link>

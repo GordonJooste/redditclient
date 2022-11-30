@@ -14,7 +14,7 @@ export const Front = () => {
     
     useEffect(() => {
       dispatch(loadPostsPop(dispatch));
-    }, [dispatch]);
+    }, []);
     
 
     return(
