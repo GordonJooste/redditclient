@@ -3,14 +3,14 @@
   top: 0; 
   left: 0; 
   z-index: 9999; 
-  width: 100%;
-  background-color: #232427;
+  width: 100%; 
+  background-color: #f2f2f2;
   overflow: hidden;
 }
 
 .navlink {
     float: right;
-    color: #f2f2f2;
+    color: #232427;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -18,17 +18,8 @@
 }
 
 .navlink.active {
-  background-color: #04AA6D;
+  background-color: orangered;
   color: white;
-}
-
-.container ul {
-  list-style-type: none;
-}
-
-.container h1 {
-  color: antiquewhite;
-  text-align: center
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap");
@@ -37,232 +28,52 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  color: antiquewhite;
+  color: #232427;
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  min-height: 100vh;
-  background: #232427;
+  color: #232427;
+  background-color: #f2f2f2;
 }
 
-body .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+.container{
+  margin-top: 53px;
+  margin-left: 15%;
 }
 
-body .container .card {
-  position: relative;
-  min-width: 50rem;
-  height: 40rem;
-  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
-    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
-    5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
-  border-radius: 15px;
-  margin: 30px;
-  transition: 0.5s;
+.posts-list {
+  list-style: none;
 }
 
-
-
-body .container .card:nth-child(1) .box .content a {
-  background: #2196f3;
-}
-
-body .container .card:nth-child(2) .box .content a {
-  background: #e91e63;
-}
-
-
-
-body .container .card .box {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  right: 20px;
-  bottom: 20px;
-  background: #2a2b2f;
-  border-radius: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  transition: 0.5s;
-}
-
-body .container .card .box:hover {
-  transform: translateY(-50px);
-}
-
-body .container .card .box:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.03);
-}
-
-body .container .card .box .content {
-  padding: 20px;
-  text-align: center;
-}
-
-body .container .card .box .content h2 {
-  position: absolute;
-  top: -10px;
-  right: 30px;
-  font-size: 8rem;
-  color: antiquewhite;
-}
-
-body .container .card .box .content h3 {
-  font-size: 1.2rem;
-  color: #fff;
-  z-index: 1;
-  transition: 0.5s;
-  margin-bottom: 15px;
-}
-
-body .container .card .box .content p {
-  font-size: 1rem;
-  font-weight: 300;
-  color: rgba(255, 255, 255, 0.9);
-  z-index: 1;
-  transition: 0.5s;
-}
-
-body .container .card .box .content a {
-  position: relative;
-  display: inline-block;
-  padding: 8px 20px;
-  background: black;
-  border-radius: 5px;
+.card {
+  display: grid;
+  grid-template-columns: 40% 40%;
+  height: 20rem;
   text-decoration: none;
-  color: white;
-  margin-top: 20px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  transition: 0.5s;
-}
-body .container .card .box .content a:hover {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
-  background: #fff;
-  color: antiquewhite;
 }
 
-body .container .card:nth-child .box .content a {
-  background: #23c186;
-}
-
-body .container .comment-card {
-  position: relative;  
-  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
-    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
-    5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
-  border-radius: 15px;
-  margin: 30px;
-  transition: 0.5s;
-}
-
-body .container .comment-card .comment-box {
-  position: relative;
-  top: 20px;
-  left: 20px;
-  right: 20px;
-  bottom: 20px;
-  background: #2a2b2f;
-  border-radius: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  transition: 0.5s;
-}
-
-body .container .comment-card .comment-box:hover {
-  transform: translateY(-50px);
-}
-
-body .container .comment-card .comment-box:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.03);
-}
-
-body .container .comment-card .comment-box .comment-content {
-  padding: 20px;
-  text-align: center;
-}
-
-body .container .comment-card .comment-box .comment-content h2 {
-  position: absolute;
-  top: -10px;
-  right: 30px;
-  font-size: 8rem;
-  color: antiquewhite;
-}
-
-body .container .comment-card .comment-box .comment-content h3 {
-  font-size: 1.2rem;
-  color: #fff;
-  z-index: 1;
-  transition: 0.5s;
-  margin-bottom: 15px;
-}
-
-body .container .comment-card .comment-box .comment-content p {
-  font-size: 1rem;
-  font-weight: 300;
-  color: rgba(255, 255, 255, 0.9);
-  z-index: 1;
-  transition: 0.5s;
-}
-
-body .container .comment-card .comment-box .comment-content a {
-  position: relative;
-  display: inline-block;
-  padding: 8px 20px;
-  background: black;
-  border-radius: 5px;
+.content {
+  max-height: 20rem;
   text-decoration: none;
-  color: white;
-  margin-top: 20px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  transition: 0.5s;
-}
-body .container .comment-card .comment-box .comment-content a:hover {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
-  background: #fff;
-  color: antiquewhite;
 }
 
-div .comments-page {
-  position: absolute;
-  top: 50px;
+.content a {
+  text-decoration: none;
 }
 
-.box img {
-  object-fit: cover;
+.content h3{
+  text-decoration: none;
 }
 
-.comments-page .box {
-  text-align: center;
-  position: relative;
-  align-items: center;
-  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
-    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
-    5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
-  border-radius: 15px;
-  margin: 30px;
-  transition: 0.5s;
+.content article {
+  text-decoration: none;
+}
+
+.content img {
+  min-width: 20rem;
+}
+
+.content video {
+  max-width: 20rem;
+  max-height: 20rem;
 }

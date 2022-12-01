@@ -19,7 +19,6 @@ export const Funny = () => {
 
     return(
         <div className="front-page">
-            <h1> Welcome to /r/FUNNY</h1>
             <ul className="posts-list">
                 { 
                   postsArray.map((item) => {

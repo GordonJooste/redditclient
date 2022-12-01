@@ -19,7 +19,6 @@ export const Eyebleach = () => {
 
     return(
         <div className="front-page">
-            <h1> Welcome to /r/EyeBleach!</h1>
             <ul className="posts-list">
                 { 
                   postsArray.map((item) => {
