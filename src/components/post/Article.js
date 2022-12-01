@@ -13,33 +13,15 @@ export const Article = (props)=>{
         }
     }
     if(fulltext){
-        if(isVideo){
-            return (
-                <div className="box">
-                        <div className='content'>
-                        <video  controls >
-                            <source src={media.reddit_video.fallback_url} type="video/mp4"/>
-                        </video>
-                        
-                        </div>
-                        <div className='content'>
-                        <h3 className="article_title">{title}</h3>
-                        <a className="article_link" href= {url} >{url}</a>
-                        <article className="article_selftext"> {selftext}</article>
-                        </div>    
-                        
-                </div>
-            );
-        }
     
         if(thumbnail !== 'self' || thumbnail !== 'nsfw'){    
             return (
                 <div className="box">
-                    <div className='content'>
+                    <div className='article'>
                         <h3 className="article_title">{title}</h3>
 
                         <article className="article_selftext" > {selftext}</article>
-                        <a className="article_link" href= {url} >{url}</a>
+                        <a className="article_link" href= {url} >LINK</a>
                         </div>
                         
                 </div>
@@ -48,43 +30,24 @@ export const Article = (props)=>{
     
         return (
             <div className="box">
-                <div className='content'>
+                <div className='article'>
                     <h3 className="article_title">{title}</h3>
                     <article className="article_selftext"> {selftext}</article>
-                    <a className="article_link" href= {url} >{url}</a>
+                    <a className="article_link" href= {url} >LINK</a>
                 </div>
             </div>
         )
     
     }
-    if(isVideo){
-        return (
-            <Link to={permalinkFinal} className="box">
-                    <div className='content'>
-                    <video controls >
-                        <source src={media.reddit_video.fallback_url} type="video/mp4"/>
-                    </video>    
-                        </div>
-                    <div className='content'>
-                    <h3 className="article_title">{title}</h3>
-                    
-                    <article className="article_selftext"> {selftextfin}...</article>
-                    
-                    <a className="article_link" href= {url} >{url}</a>
-                    </div>    
-                    
-            </Link>
-        );
-    }
 
     if(thumbnail !== 'self' || thumbnail !== 'nsfw'){    
         return (
             <Link to={permalinkFinal} className="box">
-                <div className='content'>
+                <div className='article'>
                     <h3 className="article_title">{title}</h3>
                     
                     <article className="article_selftext" > {selftextfin}...</article>
-                    <a className="article_link" href= {url} >{url}</a>
+                    <a className="article_link" href= {url} >LINK</a>
                     </div>
                     
             </Link>
@@ -93,10 +56,10 @@ export const Article = (props)=>{
 
     return (
         <Link to={permalinkFinal} className="box">
-            <div className='content'>
+            <div className='article'>
                 <h3 className="article_title">{title}</h3>
                 <article className="article_selftext"> {selftextfin}...</article>
-                <a className="article_link" href= {url} >{url}</a>
+                <a className="article_link" href= {url} >LINK</a>
             </div>
             
         </Link>

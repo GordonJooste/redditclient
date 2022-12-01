@@ -50,16 +50,23 @@ body {
   grid-template-columns: 40% 40%;
   height: 20rem;
   text-decoration: none;
+  margin: 1%;
 }
 
-.content {
-  max-height: 20rem;
+.full-card {
+  display: grid;
+  height: 20rem;
+  width: 79%;
+  overflow: hidden;
+  text-decoration: none;
+  margin: 1%;
+}
+
+.box {
+  position: relative;
   text-decoration: none;
 }
 
-.content a {
-  text-decoration: none;
-}
 
 .content h3{
   text-decoration: none;
@@ -69,11 +76,43 @@ body {
   text-decoration: none;
 }
 
-.content img {
-  min-width: 20rem;
-}
-
-.content video {
+.card img {
   max-width: 20rem;
   max-height: 20rem;
+  background-color: #cccccc;
+}
+
+figure {
+  text-align: center;
+  vertical-align: middle;
+  max-width: 20rem;
+  max-height: 20rem;
+  background-color: #cccccc;
+  
+}
+
+figure img{
+  max-width: 20rem;
+  max-height: 20rem;
+  
+}
+
+figure video{
+  max-width: 20rem;
+  max-height: 20rem;
+}
+
+.article_link {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 115px;
+  height: 40px;
+  background: orangered;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  line-height: 25px;
 }
