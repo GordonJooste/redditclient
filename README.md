@@ -82,9 +82,9 @@
 
 ### Built With
 
-* [![React][React.js]][React-url]
-* [![Javascript][JS]][JS-url]
-* [![VSCode][VSCode]][VSCode-url]
+* [![React][React.js]][<img src = React-url width ='50' height ='50'/>]
+* [![Javascript][JS]][<img src = JS-url width ='50' height ='50'/>]
+* [![VSCode][VSCode]][<img src = VSCode-url width ='50' height ='50'/>]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -94,45 +94,50 @@
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+The website is hosted on github pages, so its easy to visit and use by simply clicking this link: https://gordonjooste.github.io/redditclient/
+
+Other than that, if you want to use the source code and run it locally you can just download the code and run it with npm start. 
+This will host the site locally and allow you to see any changes you've made.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
+You need npm and you can install it like so:
 * npm
   ```sh
   npm install npm@latest -g
   ```
+You will also need a code editor and as its made with react, the react libraries will be used and downloaded when running the app. 
+  
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
    git clone https://github.com/GordonJooste/redditclient
   .git
    ```
-3. Install NPM packages
+2. Install NPM packages
    ```sh
    npm install
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+4. Run the app
+   ```sh
+   npm start
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-This project is supposed to be used as a reddit client, to view and read both posts as well as comments. As it is a minimal reddit client, you won't have access to the full features that you would have 
-on a full blown reddit client.
+This project is supposed to be used as a reddit client, to view and read both posts as well as comments. As it is a minimal reddit client, you won't have access to the full features that you would have on a full blown reddit client.
 
-At the moment most features are unavaliable as the project is under construction. 
+At the moment most features are avaliable:
+-View posts from r/popular on the "front" page
+-Click any post and you'll be able to see the full text and not just a preview of the selftext
+-Click any post and you'll see the comments from the post (only root comments are displayed at the moment)
+-Choose between 3 subreddits, /r/popular, /r/eyebleach, /r/funny by clicking on the navbar
+-The link to each article is avaliable once you've gone to the comments
 
 Here is a wireframe of how the project is expected to look:
 ![Wireframe](https://raw.githubusercontent.com/GordonJooste/redditclient/main/My%20First%20Board.jpg) Format: ![wireframe of the planned final project](url) 
@@ -145,12 +150,12 @@ Here is a wireframe of how the project is expected to look:
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Main site, able to view posts
-    - [ ] HTML and CSS Complete
-    - [ ] React Components working
-- [ ] Able to click on specific posts to get more details and comments
-- [ ] Videos and Images working well
-- [ ] Reddit API working
+- [X] Main site, able to view posts
+    - [X] HTML and CSS Complete
+    - [X] React Components working
+- [X] Able to click on specific posts to get more details and comments
+- [X] Videos and Images working well
+- [X] Reddit API working
 
 See the [open issues](https://github.com/GordonJooste/redditclient/issues) for a full list of proposed features (and known issues).
 
