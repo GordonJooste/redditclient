@@ -82,10 +82,10 @@
 
 ### Built With
 
-* [![React][React.js]]
-* [![Javascript][JS]]
-* [![VSCode][VSCode]]
-* [![Bootstrap][Bootstrap.com]]
+* [![React]]
+* [![Javascript]]
+* [![VSCode]]
+* [![Bootstrap]]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
