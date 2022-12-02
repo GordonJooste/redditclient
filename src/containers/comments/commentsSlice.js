@@ -7,7 +7,7 @@ import { apiCall } from '../../components/post/Data';
 const initialState = {
   permalink: '/r/AskReddit/comments/z78r84/if_you_invented_a_car_that_ran_on_stupidity_where/',
   comments: [{data: {body:'ha', subreddit: '/r/trees', num_comments: 200, id: 1, selftext:''}},{data: {body:'ha', subreddit: '/r/trees', num_comments: 201, id: 2, selftext:''}},{data: {body:'ha', subreddit: '/r/trees', num_comments: 204, id: 3, selftext:''}}],
-  post: {title:'ha', subreddit: '/r/trees', num_comments: 200, id: 1, selftext:'', permalink:'banaHas'},
+  post: {title:'ha', subreddit: '/r/trees', num_comments: 200, id: 1, selftext:'', permalink:'banaHas', url: 'lol'},
 };
 
 // The function below is called a thunk and allows us to perform async logic. It

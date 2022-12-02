@@ -39,19 +39,41 @@ export const Comments = () => {
     const postObject = useSelector(selectPost);
     const commentsArray = commentsObject.comments;
     
+    const media = (postObject)=>{
+      let url = postObject.url;
+      const jpg = url.substring(url.length-3);
+      if(postObject.is_video){
+        return  (
+          <figure>
+            <video controls className='content'>
+            <source src={postObject.media.reddit_video.fallback_url} type="video/mp4"/>
+            </video>
+          </figure>
+        )
+      }
+      else if(jpg === 'jpg' || jpg === 'png'){
+        return ( 
+        <figure>
+        <img src ={postObject.url} className='content'/></figure>
+        )
+      }
+      else{
+        return '';
+      }
+    }
+
     useEffect(() => {
       dispatch(loadComments(dispatch,permalink));
       dispatch(loadCommentPost(dispatch,permalink));
       //console.log(postObject);
     }, []);
     
-
-
-
     return(
         <div className="comments-page">
-            <h1> Welcome to Simple Reddit</h1>
+          <div className='card'>
+            {media(postObject)}     
             <Article  fulltext = {true} title ={postObject.title} selftext={postObject.selftext} isVideo={postObject.is_video} media={postObject.media} permalink ={postObject.permalink} thumbnail ={postObject.thumbnail} thumbnail_height ={postObject.thumbnail_height} thumbnail_width = {postObject.thumbnail_width} url ={postObject.url} /> 
+            </div>
             <ul className="comments-list">
                 { 
                   commentsArray.map((item) => {

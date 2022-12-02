@@ -47,7 +47,7 @@ export const Article = (props)=>{
                     <h3 className="article_title">{title}</h3>
                     
                     <article className="article_selftext" > {selftextfin}...</article>
-                    <a className="article_link" href= {url} >LINK</a>
+                    <a className="article_link" href= {url} >Comments</a>
                     </div>
                     
             </Link>
@@ -59,7 +59,7 @@ export const Article = (props)=>{
             <div className='article'>
                 <h3 className="article_title">{title}</h3>
                 <article className="article_selftext"> {selftextfin}...</article>
-                <a className="article_link" href= {url} >LINK</a>
+                <a className="article_link" href= {url} >Comments</a>
             </div>
             
         </Link>
