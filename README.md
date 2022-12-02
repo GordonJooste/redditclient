@@ -82,10 +82,10 @@
 
 ### Built With
 
-* [![React][React.js]][<img src = React-url width ='50' height ='50'/>]
-* [![Javascript][JS]][<img src = JS-url width ='50' height ='50'/>]
-* [![VSCode][VSCode]][<img src = VSCode-url width ='50' height ='50'/>]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
+* [![React][React.js]]
+* [![Javascript][JS]]
+* [![VSCode][VSCode]]
+* [![Bootstrap][Bootstrap.com]]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
